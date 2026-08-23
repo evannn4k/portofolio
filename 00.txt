@@ -1,0 +1,122 @@
+Implementasikan Contact Section berdasarkan AGENTS.md dan DESIGN.md.
+
+Contact Section harus memiliki form kontak sebagai elemen utama.
+
+## Tujuan
+
+Visitor dapat mengisi form untuk menghubungi saya mengenai project, collaboration, internship, atau pertanyaan lainnya.
+
+Jangan membuat Contact hanya berupa daftar social media atau kumpulan CTA.
+
+## Form Fields
+
+Buat form dengan field berikut:
+
+### 1. Nama
+- label: Nama
+- type: text
+- required
+- gunakan Input
+
+### 2. Email
+- label: Email
+- type: email
+- required
+- gunakan Input
+- validasi format email
+
+### 3. Nomor
+- label: Nomor
+- type: tel
+- gunakan Input
+- jangan menggunakan `type="number"` karena nomor telepon bukan nilai numerik
+- boleh optional
+
+### 4. Tipe
+- label: Tipe
+- gunakan Select
+- pilihan:
+  - Project
+  - Collaboration
+  - Internship
+  - Question
+  - Other
+
+### 5. Pesan
+- label: Pesan
+- gunakan Textarea
+- required
+- memiliki ukuran yang cukup untuk pesan panjang
+
+### 6. Submit
+- tombol: "Kirim Pesan"
+- gunakan primary button
+- bentuk pill sesuai DESIGN.md
+
+## Layout
+
+Gunakan editorial contact layout.
+
+Desktop:
+- bagian kiri berisi heading dan deskripsi singkat
+- bagian kanan berisi form
+
+Tablet:
+- gunakan 2 kolom jika ruang masih cukup
+- jika tidak, gunakan 1 kolom
+
+Mobile:
+- 1 kolom
+- heading dan deskripsi berada di atas form
+
+Gunakan generous whitespace sesuai DESIGN.md.
+
+## Visual Design
+
+Ikuti DESIGN.md secara ketat:
+
+- editorial
+- minimal
+- clean
+- generous whitespace
+- rounded inputs
+- rounded card jika diperlukan
+- primary blue digunakan secara hemat
+- minimal shadow
+- semantic color tokens
+- light mode
+- dark mode
+
+Form tidak boleh terlihat seperti admin dashboard.
+
+Jangan menggunakan:
+- glassmorphism
+- excessive gradients
+- neon colors
+- excessive shadows
+- excessive animation
+
+## Components
+
+Gunakan komponen yang sudah tersedia terlebih dahulu.
+
+Periksa:
+- `src/components/ui/`
+- shadcn components
+- existing form components
+
+Jika tersedia, gunakan:
+- Field
+- FieldLabel
+- FieldError
+- Input
+- Select
+- Textarea
+- Button
+
+Jangan membuat ulang primitive yang sudah tersedia.
+
+Gunakan semantic form structure:
+
+```jsx
+<form>
