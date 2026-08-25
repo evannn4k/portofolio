@@ -48,7 +48,7 @@ export default function Skills() {
             Teknologi yang saya gunakan
           </h2>
           <TypingAnimation
-            className="mt-5 text-body-lg text-body"
+            className="mt-5 text-body-lg text-body leading-7"
             typeSpeed={16}
             loop={false}
             as="p"

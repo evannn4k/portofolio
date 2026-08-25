@@ -27,7 +27,7 @@ export default function Hero() {
           "opacity-70",
         )}
       />
-      <div className="mx-auto max-w-6xl px-4 pb-24 pt-28 sm:px-6 lg:px-8 lg:pb-32 lg:pt-40">
+      <div className="z-10mx-auto max-w-6xl px-4 pb-24 pt-28 sm:px-6 lg:px-8 lg:pb-32 lg:pt-40">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <p className="text-caption font-medium uppercase tracking-[0.18em] text-primary">
