@@ -1,14 +1,23 @@
 import { Badge } from "@/components/ui/badge";
+import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
+import { TypingAnimation } from "@/components/ui/typing-animation";
+import { cn } from "@/lib/utils";
 
-const LEARNING_STACK = ["React", "Tailwind CSS", "Laravel", "MySQL"];
+const LEARNING_STACK = ["React", "Inertia.js", "Laravel", "MySQL"];
 
 export default function About() {
   return (
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="bg-surface-soft py-24 lg:py-32"
+      className="relative overflow-hidden bg-surface-soft py-24 lg:py-32"
     >
+      <InteractiveGridPattern
+        className={cn(
+          "[mask-image:radial-gradient(300px_circle_at_25%,white,transparent)]",
+          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
+        )}
+      />
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
@@ -18,28 +27,24 @@ export default function About() {
             <h2
               id="about-heading"
               className="mt-4 text-display-sm sm:text-display-md md:text-display-lg"
+              data-aos="fade-right"
             >
               Di balik kode, ada yang terus belajar.
             </h2>
           </div>
 
           <div className="lg:col-span-7">
-            <p className="text-body-lg text-body">
-              Saya [Nama Anda], siswa SMK [Nama Sekolah] jurusan Pengembangan
-              Perangkat Lunak dan Gim (PPLG).
-            </p>
-            <p className="mt-5 text-body-md text-body">
-              Saat ini saya sedang menjalani magang di [Nama Tempat Magang],
-              belajar bekerja pada proyek web yang nyata &mdash; dari cara
-              mendiskusikan ide, menulis kode, sampai menyelesaikan masalah
-              yang muncul di lapangan.
-            </p>
-            <p className="mt-5 text-body-md text-body">
-              Minat utama saya ada pada web development: menyusun antarmuka
-              yang rapi sambil memahami bagaimana sebuah aplikasi bekerja
-              sebagai satu kesatuan.
-            </p>
+            <TypingAnimation
+              className="mt-5 text-body-md text-body leading-7 whitespace-pre-line"
+              typeSpeed={6}
+              loop={false}
+              as="p"
+              children={`Saya Muhammad Evan Susanto, siswa SMK Muhammadiyah 1 Weleri jurusan Pengembangan Perangkat Lunak dan Gim (PPLG).
 
+              Saat ini saya sedang menjalani magang di Crocodic Academy, belajar bekerja pada proyek web yang nyata dari cara mendiskusikan ide, menulis kode, sampai menyelesaikan masalah yang muncul di lapangan.
+
+              Minat utama saya ada pada web development: menyusun antarmuka yang rapi sambil memahami bagaimana sebuah aplikasi bekerja sebagai satu kesatuan.`}
+            />
             <div className="mt-10 border-t border-border pt-8">
               <h3 className="text-title-sm text-foreground">
                 Teknologi yang sedang dipelajari
@@ -50,17 +55,26 @@ export default function About() {
               >
                 {LEARNING_STACK.map((tech) => (
                   <li key={tech}>
-                    <Badge variant="secondary" className="h-6 px-3 text-caption">
+                    <Badge
+                      variant="secondary"
+                      className="h-6 px-3 text-caption"
+                    >
                       {tech}
                     </Badge>
                   </li>
                 ))}
               </ul>
-              <p className="mt-8 text-body-md text-body">
-                [Tuliskan arah perkembangan skill Anda, misalnya: memperdalam
-                frontend modern, memperkuat dasar-dasar backend, atau
-                mengeksplorasi tools pengembangan lain.]
-              </p>
+              <TypingAnimation
+                className="mt-8 text-body-md text-body leading-7"
+                typeSpeed={12}
+                loop={false}
+                as="p"
+              >
+                Berfokus pada pengembangan web modern dengan merancang backend
+                REST API di Laravel, membangun UI dinamis via React + Vite,
+                serta sering eksplor pendekatan monolith pakai Inertia.js yang
+                membuat alur development jadi jauh lebih cepat dan rapi.
+              </TypingAnimation>
             </div>
           </div>
         </div>

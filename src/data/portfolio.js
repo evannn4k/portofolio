@@ -1,29 +1,29 @@
 export const projects = [
   {
-    title: "[Nama Proyek 1]",
+    title: "Internship Management",
     description:
-      "[Deskripsi singkat proyek: apa yang dibangun, masalah yang diselesaikan, dan kontribusi Anda.]",
+      "Aplikasi manajemen magang berbasis web untuk menyederhanakan pelaporan kegiatan, pendataan peserta, dan pemantauan evaluasi secara terstruktur.",
     image: null,
-    technologies: ["[Teknologi 1]", "[Teknologi 2]", "[Teknologi 3]"],
-    github: "#",
+    technologies: ["React", "Shadcn/ui", "Laravel", "MySQL", "Inertia.js"],
+    github: "https://github.com/evannn4k/InternshipManagement",
     demo: null,
   },
   {
-    title: "[Nama Proyek 2]",
+    title: "My Money",
     description:
-      "[Deskripsi singkat proyek: apa yang dibangun, masalah yang diselesaikan, dan kontribusi Anda.]",
+      "Project Website Personal Finance Manager yang dibuat untuk membantu pengguna mengelola keuangan pribadi mereka .",
     image: null,
-    technologies: ["[Teknologi 1]", "[Teknologi 2]"],
-    github: "#",
+    technologies: ["React", "Shadcn/ui", "Laravel", "MySQL", "RestFul API"],
+    github: "https://github.com/evannn4k/MyMoney",
     demo: null,
   },
   {
-    title: "[Nama Proyek 3]",
+    title: "Top-up Game",
     description:
-      "[Deskripsi singkat proyek: apa yang dibangun, masalah yang diselesaikan, dan kontribusi Anda.]",
+      "[Tugas akhir Kelas Industri tingkat Middle, Website Top Up Game dengan sistem pembayaran otomatis menggunakan Payment Gateway (Flip Test Mode).",
     image: null,
-    technologies: ["[Teknologi 1]", "[Teknologi 2]", "[Teknologi 3]"],
-    github: "#",
+    technologies: ["Laravel", "Tailwind CSS", "Flowbite", "MySQL"],
+    github: "https://github.com/evannn4k/LastProjectMiddle",
     demo: null,
   },
 ];
@@ -32,25 +32,25 @@ export const skillGroups = [
   {
     title: "Frontend",
     skills: [
-      { name: "React", icon: "react" },
-      { name: "Tailwind CSS", icon: "tailwindcss" },
-      { name: "shadcn/ui", icon: "shadcnui" },
+      { name: "React", icon: "/images/logo/react.jpg" },
+      { name: "Tailwind CSS", icon: "/images/logo/tailwind.jpg" },
+      { name: "Shadcn/ui", icon: "/images/logo/shadcn.jpg" },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "PHP", icon: "php" },
-      { name: "Laravel", icon: "laravel" },
+      { name: "PHP", icon: "/images/logo/php.jpg" },
+      { name: "Laravel", icon: "/images/logo/laravel.jpg" },
     ],
   },
   {
     title: "Database & Tools",
     skills: [
-      { name: "MySQL", icon: "mysql" },
-      { name: "Git", icon: "git" },
-      { name: "GitHub", icon: "github" },
-      { name: "VS Code", icon: "vscode" },
+      { name: "MySQL", icon: "/images/logo/mysql.jpg" },
+      { name: "MariaDB", icon: "/images/logo/mariadb.jpg" },
+      { name: "Git", icon: "/images/logo/git.jpg" },
+      { name: "GitHub", icon: "/images/logo/github.jpg" },
     ],
   },
 ];
@@ -72,9 +72,9 @@ export const experience = {
 };
 
 export const education = {
-  school: "SMK [Nama Sekolah]",
+  school: "SMK Muhammadiyah 1 Weleri",
   major: "Pengembangan Perangkat Lunak dan Gim (PPLG)",
-  period: "[Tahun Masuk] – Sekarang",
+  period: "2024 – Sekarang",
 };
 
 export const navLinks = [
@@ -86,7 +86,7 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  { label: "GitHub", href: "#" },
+  { label: "GitHub", href: "https://github.com/evannn4k" },
   { label: "LinkedIn", href: null },
-  { label: "Email", href: "[mailto:alamat-email-anda]" },
+  { label: "Email", href: "mailto:mevansusanto@gmail.com" },
 ];

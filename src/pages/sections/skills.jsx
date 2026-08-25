@@ -12,47 +12,18 @@ import {
 
 import { Card, CardContent } from "@/components/ui/card";
 import { skillGroups } from "@/data/portfolio";
-
-const SKILL_ICONS = {
-  react: Atom,
-  tailwindcss: Wind,
-  shadcnui: Component,
-  php: FileCode2,
-  laravel: Server,
-  mysql: Database,
-  git: GitBranch,
-  vscode: SquareCode,
-};
-
-function GithubIcon(props) {
-  return (
-    <svg
-      viewBox="0 0 19 19"
-      fill="currentColor"
-      aria-hidden="true"
-      className="[&_path]:fill-current"
-      {...props}
-    />
-  );
-}
-
-function SkillIcon({ icon }) {
-  if (icon === "github") {
-    return <GithubIcon className="size-5" />;
-  }
-
-  const Icon = SKILL_ICONS[icon] ?? CodeXml;
-  return <Icon aria-hidden="true" className="size-5" />;
-}
+import { TypingAnimation } from "@/components/ui/typing-animation";
 
 function SkillItem({ skill }) {
   return (
     <li className="group/item flex items-center gap-3">
-      <span className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition duration-200 group-hover/item:bg-primary-soft group-hover/item:text-primary motion-safe:group-hover/item:scale-110">
-        <SkillIcon icon={skill.icon} />
-      </span>
+      <img
+        src={skill.icon}
+        alt={skill.name}
+        className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-secondary text-muted-foreground transition duration-200 group-hover/item:bg-primary-soft group-hover/item:text-primary motion-safe:group-hover/item:scale-110"
+      />
       <span className="text-body-sm font-medium text-card-foreground transition-colors duration-200 group-hover/item:text-primary">
-        {skill.name}
+        {skill.name ?? ""}
       </span>
     </li>
   );
@@ -76,18 +47,23 @@ export default function Skills() {
           >
             Teknologi yang saya gunakan
           </h2>
-          <p className="mt-5 text-body-lg text-body">
+          <TypingAnimation
+            className="mt-5 text-body-lg text-body"
+            typeSpeed={16}
+            loop={false}
+            as="p"
+          >
             Dikelompokkan berdasarkan perannya dalam membangun sebuah aplikasi
             web.
-          </p>
+          </TypingAnimation>
         </div>
 
         <ul
           aria-label="Kategori keahlian"
           className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:mt-16"
         >
-          {skillGroups.map((group) => (
-            <li key={group.title}>
+          {skillGroups.map((group, i) => (
+            <li key={group.title} data-aos="fade-up" data-aos-delay={i * 250}>
               <Card className="h-full gap-0 rounded-3xl py-6 shadow-none ring-border transition duration-200 [--card-spacing:--spacing(6)] hover:ring-primary/40 motion-safe:hover:-translate-y-1">
                 <CardContent>
                   <h3 className="text-title-md text-card-foreground">

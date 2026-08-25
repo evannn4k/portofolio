@@ -17,13 +17,13 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur">
+    <nav className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/50 backdrop-blur-xs">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a
           href="#"
           className="font-heading text-title-sm text-foreground transition-colors hover:text-primary"
         >
-          [Nama Anda]
+          Evan
         </a>
 
         <nav

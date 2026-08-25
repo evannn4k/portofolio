@@ -1,4 +1,5 @@
 import ProjectCard from "@/components/app/project-card";
+import { TypingAnimation } from "@/components/ui/typing-animation";
 import { projects } from "@/data/portfolio";
 
 export default function Projects() {
@@ -19,15 +20,26 @@ export default function Projects() {
           >
             Proyek
           </h2>
-          <p className="mt-5 text-body-lg text-body">
+          <TypingAnimation
+            className="mt-5 text-body-lg text-body leading-7"
+            typeSpeed={16}
+            loop={false}
+            as="p"
+          >
             Proyek yang saya kerjakan untuk belajar membangun aplikasi web
             secara nyata, baik dari tugas sekolah maupun pengalaman magang.
-          </p>
+          </TypingAnimation>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+          {projects.map((project, i) => (
+            <div
+              key={project.title}
+              data-aos-delay={i * 250}
+              data-aos="fade-up"
+            >
+              <ProjectCard project={project} />
+            </div>
           ))}
         </div>
       </div>

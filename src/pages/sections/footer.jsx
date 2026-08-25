@@ -9,10 +9,10 @@ export default function Footer() {
         <div className="flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between lg:py-12">
           <div>
             <p className="font-heading text-title-sm text-foreground">
-              [Nama Anda]
+              Evan
             </p>
             <p className="mt-1 text-caption text-muted-foreground">
-              &copy; {new Date().getFullYear()} [Nama Anda]
+              &copy; {new Date().getFullYear()} evan
             </p>
           </div>
 

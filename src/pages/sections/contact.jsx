@@ -85,7 +85,7 @@ export default function Contact() {
             </h2>
             <p className="mt-5 text-body-lg text-body">
               Punya proyek, ide kolaborasi, atau informasi magang? Ceritakan
-              lewat form di samping &mdash; saya akan membalas sebisa
+              lewat form di samping saya akan membalas sebisa
               mungkin.
             </p>
 
