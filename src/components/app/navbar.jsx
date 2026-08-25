@@ -64,7 +64,7 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-72">
               <SheetHeader>
-                <SheetTitle>[Nama Anda]</SheetTitle>
+                <SheetTitle>Evan</SheetTitle>
                 <SheetDescription>Menu navigasi</SheetDescription>
               </SheetHeader>
               <nav
